@@ -1049,7 +1049,7 @@ suite.addBatch({
 
         var browser = createBrowser(app);
         browser.get('/bar', {
-            headers: { 'Cookie': firstHijack + '; ' + secondHijack } 
+            headers: { 'Cookie': firstHijack + '; ' + secondHijack }
         }, function(res, $){
           browser.done();
         });
@@ -1145,8 +1145,8 @@ suite.addBatch({
       var self = this;
       app.use(cookieSessions({
         cookieName: 'session',
-        duration: 300,
-        activeDuration: 500,
+        duration: 500,
+        activeDuration: 300,
         secret: 'yo'
       }));
 
